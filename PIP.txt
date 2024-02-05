@@ -11,3 +11,5 @@ Pour obtenir une assistance vocale, vous devez utiliser au lieu de , par ex.disc
 
 content_copy
 python3 -m pip install -U discord.py[voice]
+
+pip install python-dotenv
