@@ -1,0 +1,14 @@
+discord-bot/
+├── cogs/
+│   ├── admin.py
+│   ├── fun.py
+│   └── modération.py
+├── data/
+│   ├── images/
+│   └── sounds/
+├── logs/
+│   └── bot.log
+├── main.py
+├── requirements.txt
+├── utils.py
+└── .env
