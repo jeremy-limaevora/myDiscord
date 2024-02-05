@@ -1,0 +1,13 @@
+Installation
+Vous pouvez obtenir la bibliothèque directement à partir de PyPI :
+
+content_copy
+python3 -m pip install -U discord.py
+Si vous utilisez Windows, les éléments suivants doivent être utilisés à la place :
+
+content_copy
+py -3 -m pip install -U discord.py
+Pour obtenir une assistance vocale, vous devez utiliser au lieu de , par ex.discord.py[voice]discord.py
+
+content_copy
+python3 -m pip install -U discord.py[voice]
