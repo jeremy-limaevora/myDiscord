@@ -42,7 +42,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'123456789012345678','Test Test','1234','discord-avatar-512-V66T7.png','test@example.com','test123',0),(2,'1234567890123456789','LeBron James','5678','https://cdn.discordapp.com/avatars/123456789012345678/a_f2e1234567890.png','lebronjames@gmail.com','king23',1),(3,'12345678901234567890','Michael Jordan','9101','https://cdn.discordapp.com/avatars/123456789012345678/a_f2e1234567890.png','michaeljordan@gmail.com','bulls23',1),(4,'123456789012345678930','Stephen Curry','1213','https://cdn.discordapp.com/avatars/123456789012345678/a_f2e1234567890.png','stephencurry@gmail.com','shooter30',1);
+INSERT INTO `users` VALUES (1,'1919','Cyrus Dehghan','1234','https://example.com/avatar.png','cyrusdehghan@example.com','cyruslaplateforme',1),(2,'1993','Jeremy Lima-Evora','5678','https://example.com/avatar.png','jeremylimaevora@example.com','jeremylaplateforme',1),(3,'2024','Seb','9101','https://example.com/avatar.png','seb@example.com','seblaplateforme',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-22 10:21:58
+-- Dump completed on 2024-02-26 16:03:52
