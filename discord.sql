@@ -16,34 +16,84 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `users`
+-- Table structure for table `channel`
 --
 
-DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS `channel`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `users` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `discord_id` varchar(255) DEFAULT NULL,
-  `username` varchar(255) DEFAULT NULL,
-  `discriminator` varchar(4) DEFAULT NULL,
-  `avatar` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  `is_admin` tinyint(1) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `discord_id` (`discord_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `channel` (
+  `id_utilisateur` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `mot_de_passe` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_utilisateur`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `channel`
 --
 
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'1919','Cyrus Dehghan','1234','https://example.com/avatar.png','cyrusdehghan@example.com','cyruslaplateforme',1),(2,'1993','Jeremy Lima-Evora','5678','https://example.com/avatar.png','jeremylimaevora@example.com','jeremylaplateforme',1),(3,'2024','Seb','9101','https://example.com/avatar.png','seb@example.com','seblaplateforme',1);
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+LOCK TABLES `channel` WRITE;
+/*!40000 ALTER TABLE `channel` DISABLE KEYS */;
+INSERT INTO `channel` VALUES (1,'Seb','seb@example.com','seblaplateforme'),(2,'Cyrus','cyrus@example.com','cyruslaplateforme'),(3,'Jeremy','jeremy@example.com','jeremylaplateforme');
+/*!40000 ALTER TABLE `channel` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `messagerie`
+--
+
+DROP TABLE IF EXISTS `messagerie`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `messagerie` (
+  `id_utilisateur` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `mot_de_passe` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_utilisateur`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `messagerie`
+--
+
+LOCK TABLES `messagerie` WRITE;
+/*!40000 ALTER TABLE `messagerie` DISABLE KEYS */;
+INSERT INTO `messagerie` VALUES (1,'Seb','seb@example.com','seblaplateforme'),(2,'Cyrus','cyrus@example.com','cyruslaplateforme'),(3,'Jeremy','jeremy@example.com','jeremylaplateforme');
+/*!40000 ALTER TABLE `messagerie` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `utilisateurs`
+--
+
+DROP TABLE IF EXISTS `utilisateurs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `utilisateurs` (
+  `id_utilisateur` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `mot_de_passe` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_utilisateur`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `utilisateurs`
+--
+
+LOCK TABLES `utilisateurs` WRITE;
+/*!40000 ALTER TABLE `utilisateurs` DISABLE KEYS */;
+INSERT INTO `utilisateurs` VALUES (1,'Seb','seb@example.com','seblaplateforme'),(2,'Cyrus','cyrus@example.com','cyruslaplateforme'),(3,'Jeremy','jeremy@example.com','jeremylaplateforme');
+/*!40000 ALTER TABLE `utilisateurs` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -55,4 +105,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-26 16:03:52
+-- Dump completed on 2024-02-27 12:01:06
